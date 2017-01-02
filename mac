@@ -62,5 +62,5 @@ if [ -f ~/.ssh/id_rsa.pub ]; then
 fi
 
 fancy_echo "cloning dotfiles"
-git clone http://github.com/ryanghdam/dotfiles.git ~/.dotfiles
+git clone https://github.com/ryanaghdam/dotfiles.git ~/.dotfiles
 rcup
