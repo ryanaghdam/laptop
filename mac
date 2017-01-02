@@ -55,12 +55,15 @@ tap "thoughtbot/formulae"
 brew "rcm"
 EOF
 
-if [ -f ~/.ssh/id_rsa.pub ]; then
+if [ ! -f ~/.ssh/id_rsa.pub ]; then
   fancy_echo "Generating SSH key"
   ssh-keygen -t rsa
   cat ~/.ssh/id_rsa.pub
 fi
 
-fancy_echo "cloning dotfiles"
-git clone https://github.com/ryanaghdam/dotfiles.git ~/.dotfiles
+if [ ! -d ~/.dotfiles]; then 
+  fancy_echo "cloning dotfiles"
+  git clone https://github.com/ryanaghdam/dotfiles.git ~/.dotfiles
+fi
+
 rcup
