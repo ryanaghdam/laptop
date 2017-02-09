@@ -12,12 +12,10 @@ Forked from [thoughtbot/laptop](https://github.com/thoughtbot/laptop) script.
 Install
 -------
 
-Download, review, then execute the script:
+Download and execute the script:
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/ryanaghdam/laptop/master/mac
-less mac
-sh mac 2>&1 | tee ~/laptop.log
+curl https://raw.githubusercontent.com/ryanaghdam/laptop/master/mac | sh 2>&1 | tee ~/laptop.log
 ```
 
 Debugging
